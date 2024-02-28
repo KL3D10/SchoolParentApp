@@ -1,16 +1,17 @@
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import HeaderComponent from '../../components/HeaderComponent'
+import HeaderComponent from '../../components/General/HeaderComponent'
 import PaidPaymentCard from '../../components/Payments/PaidPaymentCard'
 import PaymentCard from '../../components/Payments/PaymentsCard'
 import { PaymentsData } from '../../assets/data/PaymentsData'
+import { useNavigation } from '@react-navigation/native'
 
 const PaymentsScreen = () => {
   const FinishedPayments = PaymentsData.filter(item => item.status == 'PAID' || item.status == 'EXPIRED')
-  console.log(FinishedPayments)
+  const navigation = useNavigation()
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <HeaderComponent title={'Pagesat'} backIcon={false} />
+      <HeaderComponent title={'Historiku i Pagesave'} backIcon={false} navigation={navigation} />
       <View style={styles.container}>
         <View style={{ marginTop: 10 }}>
           <PaymentCard />

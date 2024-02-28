@@ -16,7 +16,7 @@ const PaymentCard = () => {
           </View>
         </View>
       </View>
-      <TouchableOpacity style={styles.bottomContainer} onPress={() => navigation.navigate('MessagesScreen')}>
+      <TouchableOpacity style={styles.bottomContainer} onPress={() => navigation.navigate('UnpaidItemsScreen')}>
         <Text style={styles.bottomText}>Shko tek Pagesat</Text>
       </TouchableOpacity>
     </View>

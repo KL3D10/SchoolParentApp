@@ -3,10 +3,14 @@ import React from 'react'
 import VectorIcon from '../../utils/VectorIcon'
 
 const PaidPaymentCard = (props) => {
-    const getIconByStatus = (status) => {
-        switch (status) {
+    const getIcon = (paymentItem) => {
+        switch (paymentItem.status) {
             case 'PAID':
-                return <VectorIcon type="Entypo" name="credit-card" size={40} color="white" />
+                if (paymentItem.paymentMethod == "CARD") {
+                    return <VectorIcon type="Entypo" name="credit-card" size={40} color="white" />
+                } else {
+                    return <VectorIcon type="Ionicons" name="cash-outline" size={40} color="white" />
+                }
             case 'EXPIRED':
                 return <VectorIcon type="MaterialCommunityIcons" name="credit-card-remove-outline" size={40} color="white" />
         }
@@ -19,10 +23,23 @@ const PaidPaymentCard = (props) => {
                 return "grey"
         }
     }
+    const getPaymentMethod = (paymentItem) => {
+        switch (paymentItem.status) {
+            case 'PAID':
+                if (paymentItem.paymentMethod == "CARD") {
+                    return 'KARTE'
+                } else {
+                    return "CASH"
+                }
+            case 'EXPIRED':
+                return "SKADUAR"
+        }
+    }
     return (
         <TouchableOpacity style={[styles.container, styles.shadowProp]}>
             <View style={[styles.topContainer, { backgroundColor: getColorByStatus(props.item.status) }]}>
-                {getIconByStatus(props.item.status)}
+                {getIcon(props.item)}
+                <Text style={styles.topMethodText}>{getPaymentMethod(props.item)}</Text>
             </View>
             <View style={styles.bottomContainer}>
                 <Text style={{ color: 'grey', fontWeight: '600' }}>{props.item.dueDate}</Text>
@@ -48,6 +65,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 8,
         borderRadius: 5
+    },
+    topMethodText:{
+        color: 'white',
+        fontSize: 10,
+        fontWeight: '700'
     },
     bottomContainer: {
         flex: 2,

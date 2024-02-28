@@ -2,6 +2,7 @@ export const PaymentsData = [
     {
         id: 1,
         status: "PAID",
+        paymentMethod: "CARD",
         description: "Ky eshte nje pershkrim test",
         amount: "2500.00",
         dueDate: "25 JANAR"
@@ -23,6 +24,7 @@ export const PaymentsData = [
     {
         id: 4,
         status: "PAID",
+        paymentMethod: "CASH",
         description: "Pagesa qe duhet te paguhet per test",
         amount: "2000.00",
         dueDate: "25 SHKURT"
@@ -44,6 +46,7 @@ export const PaymentsData = [
     {
         id: 7,
         status: "PAID",
+        paymentMethod: "CASH",
         description: "Ky eshte nje pershkrim test",
         amount: "4300.00",
         dueDate: "15 QERSHOR"
@@ -65,6 +68,7 @@ export const PaymentsData = [
     {
         id: 10,
         status: "PAID",
+        paymentMethod: "CARD",
         description: "Pagesa qe duhet te paguhet per test",
         amount: "530.00",
         dueDate: "15 QERSHOR"
@@ -79,6 +83,7 @@ export const PaymentsData = [
     {
         id: 12,
         status: "PAID",
+        paymentMethod: "CARD",
         description: "Pagesa qe duhet te paguhet per test",
         amount: "1000.00",
         dueDate: "30 DHJETOR"
@@ -93,12 +98,13 @@ export const PaymentsData = [
     {
         id: 14,
         status: "PAID",
+        paymentMethod: "CASH",
         description: "Pagesa qe duhet te paguhet per test",
         amount: "4500.00",
         dueDate: "30 DHJETOR"
     },
     {
-        id: 11,
+        id: 21,
         status: "UNPAID",
         description: "Ky eshte nje pershkrim test",
         amount: "5300.00",
@@ -107,6 +113,7 @@ export const PaymentsData = [
     {
         id: 15,
         status: "PAID",
+        paymentMethod: "CARD",
         description: "Pagesa qe duhet te paguhet per test",
         amount: "489.00",
         dueDate: "30 DHJETOR"
@@ -121,6 +128,7 @@ export const PaymentsData = [
     {
         id: 17,
         status: "PAID",
+        paymentMethod: "CARD",
         description: "Pagesa qe duhet te paguhet per test",
         amount: "450.00",
         dueDate: "30 DHJETOR"
@@ -145,5 +153,19 @@ export const PaymentsData = [
         description: "Ky eshte nje pershkrim test",
         amount: "456.00",
         dueDate: "15 QERSHOR"
-    }
+    },
+    {
+        id: 22,
+        status: "UNPAID",
+        description: "Pagesa qe duhet te paguhet per test",
+        amount: "1220.00",
+        dueDate: "30 DHJETOR"
+    },
+    {
+        id: 23,
+        status: "UNPAID",
+        description: "Pagesa qe duhet te paguhet per test test test test test",
+        amount: "1220.00",
+        dueDate: "30 DHJETOR"
+    },
 ]

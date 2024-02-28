@@ -1,6 +1,6 @@
 import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect } from 'react'
-import HeaderComponent from '../../components/HeaderComponent'
+import HeaderComponent from '../../components/General/HeaderComponent'
 import { useNavigation } from '@react-navigation/native'
 import VectorIcon from '../../utils/VectorIcon'
 

@@ -1,6 +1,6 @@
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import HeaderComponent from '../../components/HeaderComponent'
+import HeaderComponent from '../../components/General/HeaderComponent'
 import { useNavigation } from '@react-navigation/native'
 import { MessagesData } from '../../assets/data/MessagesData'
 import NotificationItem from '../../components/Notifications/NotificationItem'

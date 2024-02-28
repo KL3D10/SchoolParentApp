@@ -26,7 +26,7 @@ const NotificationItem = (props) => {
         switch (category) {
             case 'Sport':
                 return 'football-outline'
-            case 'Udhetim':r
+            case 'Udhetim':
             
                 return 'bus'
             case 'Takim':

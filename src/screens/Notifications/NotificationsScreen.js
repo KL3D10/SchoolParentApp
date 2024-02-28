@@ -1,15 +1,17 @@
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import HeaderComponent from '../../components/HeaderComponent'
+import HeaderComponent from '../../components/General/HeaderComponent'
 import MessagesCard from '../../components/Notifications/MessagesCard'
 import VectorIcon from '../../utils/VectorIcon'
 import NotificationItem from '../../components/Notifications/NotificationItem'
 import { NotificationsData } from '../../assets/data/NotificationsData'
+import { useNavigation } from '@react-navigation/native'
 
 const NotificationsScreen = () => {
+    const navigation = useNavigation()
     return (
         <SafeAreaView style={{ flex: 1 }}>
-            <HeaderComponent title={'Njoftimet'} backIcon={false} />
+            <HeaderComponent title={'Njoftimet'} backIcon={false} navigation={navigation}/>
             <View style={styles.container}>
                 <View style={{ marginTop: 10 }}>
                     <MessagesCard />
